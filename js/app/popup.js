@@ -8,5 +8,26 @@ myAmazonHistory.config(function($stateProvider, $urlRouterProvider){
 			url: '/home',
 			templateUrl: '../views/home.html'
         })
-    $urlRouterProvider.otherwise('home')
+		.state('login', {
+			url: '/login',
+			templateUrl: '../views/login.html'
+        })
+		.state('signup', {
+			url: '/signup',
+			templateUrl: '../views/signup.html'
+        })
+    $urlRouterProvider.otherwise('login') //set default place to login.
 });
+
+myAmazonHistory.controller("PopupCtrl", ['$scope', '$state', function($scope, $state){
+	console.log('PopupCtrl Initialized');
+
+	$scope.login = function(formData){
+		console.log('formData from login: ',formData);
+	};
+	$scope.signup = function(formData){
+		console.log('formData from signup: ',formData);
+	};
+
+
+}]);

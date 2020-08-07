@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<link rel="stylesheet" href="../css/darkly-bootswatch.css">
+	<link rel="stylesheet" href="../css/minty-bootswatch.css">
 	<link rel="stylesheet" href="../css/popup.css">
 <!-- For Angular -->
     <script src="../js/lib/angular.min.js"></script>
@@ -14,8 +14,17 @@
 </head>
 <!-- for Angular -->
 <body ng-app="myamazonhistory">
-	<div class="container">
-		<div ui-view></div>
+	<div ng-controller="PopupCtrl" class="container">
+		<div class="pt-3 row text-center">
+			<div class="col-sm-6">
+				<div id="form-container">
+					<div class="page-header">
+						<h3>My Amazon History</h3>
+					</div>
+					<div ui-view></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
